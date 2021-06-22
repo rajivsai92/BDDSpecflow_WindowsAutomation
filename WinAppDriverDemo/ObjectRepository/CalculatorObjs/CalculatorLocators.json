@@ -1,0 +1,13 @@
+﻿{
+
+
+  "PlusOperator": "Id>plusButton",
+  "Numbers": "Id>num{0}Button",
+  "MinusOperator": "Id>minusButton",
+  "EqualOperator": "Id>equalButton",
+  "ClearButton": "Id>clearButton",
+  "ResultContainer": "Id>CalculatorResults"
+
+
+
+}
