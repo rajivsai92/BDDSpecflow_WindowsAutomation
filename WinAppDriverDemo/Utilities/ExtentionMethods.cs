@@ -10,10 +10,7 @@ namespace WinAppDriverDemo.Utilities
    public static  class ExtentionMethods
     {
         public static WindowsElement GetWindowsElement(this WindowsDriver<WindowsElement> windowsDriver, string Locator)
-        {
-
-
-          
+        {         
 
             var l = Locator.Split('>', 2);
             if (l[0].Equals("Id"))

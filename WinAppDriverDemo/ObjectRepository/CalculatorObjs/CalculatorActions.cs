@@ -38,6 +38,8 @@ namespace WinAppDriverDemo.ObjectRepository.CalculatorObjs
         public void ClickAddButton()
         {
             var locator = _configuration["PlusOperator"];
+
+
             _waits.WaitforWinElement(locator);
             _windowsDriver.GetWindowsElement(locator).Click();
 
@@ -46,6 +48,7 @@ namespace WinAppDriverDemo.ObjectRepository.CalculatorObjs
         public void ClickMinusButton()
         {
             var locator = _configuration["MinusOperator"];
+
 
             _windowsDriver.GetWindowsElement(locator).Click();
 

@@ -20,7 +20,7 @@ namespace WinAppDriverDemo.Hooks
     {
 
         private IObjectContainer _IObjectContainer;
-        private WindowsSession _winSession; 
+        private WindowsSession _winSession;
         public static string ScreenshotPath;
         public WindowsDriver<WindowsElement> windowsDriver;
         private static ScenarioContext _scenarioContext;
@@ -29,7 +29,8 @@ namespace WinAppDriverDemo.Hooks
         private ISpecFlowOutputHelper _specFlowOutputHelper;
 
 
-        public Hooks(IObjectContainer objectContainer, WindowsSession windowsSession, ScenarioContext scenarioContext,ISpecFlowOutputHelper specFlowOutputHelper)
+        public Hooks(IObjectContainer objectContainer, WindowsSession windowsSession,
+            ScenarioContext scenarioContext, ISpecFlowOutputHelper specFlowOutputHelper)
         {
             _IObjectContainer = objectContainer;
             _winSession = windowsSession;
@@ -50,8 +51,8 @@ namespace WinAppDriverDemo.Hooks
         }
 
 
-   [BeforeFeature]
-   public static void BeforeFeature()
+        [BeforeFeature]
+        public static void BeforeFeature()
         {
             WindowsSession.StartWinAppDriver();
 
@@ -105,7 +106,7 @@ namespace WinAppDriverDemo.Hooks
         public void AfterScenario()
         {
             //TODO: implement logic that has to run after executing each scenario
-           
+
             windowsDriver.Quit();
             WindowsSession.KillProcess("Calculator.exe");
 
@@ -141,3 +142,4 @@ namespace WinAppDriverDemo.Hooks
         }
     }
 }
+
